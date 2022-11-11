@@ -26,5 +26,4 @@ jobs:
         python -m pip install .
     - name: Test with pytest
       run: |
-        cd tests
-        gdb -ex run -ex bt -ex quit --args python -m pytest
+        pytest
