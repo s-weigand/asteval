@@ -26,5 +26,7 @@ jobs:
         python -m pip install .
     - name: Test with pytest
       run: |
+        sudo apt-get update
+        sudo apt-get install gdb 
         cd tests
-        pytest -l
+        gdb -ex run -ex bt -ex quit --args python -m pytest
