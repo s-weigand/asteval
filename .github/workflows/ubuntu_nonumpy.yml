@@ -27,4 +27,4 @@ jobs:
     - name: Test with pytest
       run: |
         cd tests
-        pytest -l
+        gdb -ex run -ex bt -ex quit --args python -m pytest
